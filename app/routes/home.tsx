@@ -1,13 +1,16 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
-export function meta({}: Route.MetaArgs) {
+export function meta(_: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Local LangEx AI" },
+    { name: "description", content: "Local translation and grammar-check app." },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <main className="p-6">
+      <h1 className="text-2xl font-semibold">Local LangEx AI</h1>
+    </main>
+  );
 }
