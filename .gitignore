@@ -4,6 +4,7 @@ node_modules/
 !.env.example
 
 .react-router/
+.vite/
 build/
 dist/
 
