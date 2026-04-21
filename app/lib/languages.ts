@@ -19,7 +19,10 @@ export const SUPPORTED_LANGUAGES = [
 
 export type LanguageCode = (typeof SUPPORTED_LANGUAGES)[number]["code"];
 
-export const LANGUAGE_CODES = SUPPORTED_LANGUAGES.map((l) => l.code) as LanguageCode[];
+export const LANGUAGE_CODES = SUPPORTED_LANGUAGES.map((l) => l.code) as [
+  LanguageCode,
+  ...LanguageCode[],
+];
 
 export function getLanguageName(code: LanguageCode | "auto"): string {
   if (code === "auto") return "auto-detected";
