@@ -1,20 +1,20 @@
 export interface Language {
   code: string;
   name: string;
-  nameJa: string;
+  originalName: string;
 }
 
 export const SUPPORTED_LANGUAGES = [
-  { code: "ja", name: "Japanese", nameJa: "日本語" },
-  { code: "en", name: "English", nameJa: "英語" },
-  { code: "zh", name: "Chinese", nameJa: "中国語" },
-  { code: "ko", name: "Korean", nameJa: "韓国語" },
-  { code: "es", name: "Spanish", nameJa: "スペイン語" },
-  { code: "fr", name: "French", nameJa: "フランス語" },
-  { code: "de", name: "German", nameJa: "ドイツ語" },
-  { code: "pt", name: "Portuguese", nameJa: "ポルトガル語" },
-  { code: "ru", name: "Russian", nameJa: "ロシア語" },
-  { code: "it", name: "Italian", nameJa: "イタリア語" },
+  { code: "ja", name: "Japanese", originalName: "日本語" },
+  { code: "en", name: "English", originalName: "English" },
+  { code: "zh", name: "Chinese", originalName: "中文" },
+  { code: "ko", name: "Korean", originalName: "한국어" },
+  { code: "es", name: "Spanish", originalName: "Español" },
+  { code: "fr", name: "French", originalName: "Français" },
+  { code: "de", name: "German", originalName: "Deutsch" },
+  { code: "pt", name: "Portuguese", originalName: "Português" },
+  { code: "ru", name: "Russian", originalName: "Русский" },
+  { code: "it", name: "Italian", originalName: "Italiano" },
 ] as const satisfies readonly Language[];
 
 export type LanguageCode = (typeof SUPPORTED_LANGUAGES)[number]["code"];
